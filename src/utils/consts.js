@@ -1,20 +1,4 @@
-// import react from "../assets/react.png";
-// import node from "../assets/node.svg";
-// import cruzeiro from "../assets/cruzeiro.png";
-// import postgreSQL from "../assets/postgreSQL.png";
-// import palmeiras from "../assets/palmeiras.png"
-
-import {
-  react,
-  node,
-  cruzeiro,
-  postgreSQL,
-  palmeiras,
-  farejador,
-  linkedin,
-  github,
-  gmail,
-} from "../assets";
+import { react, node, cruzeiro, postgreSQL, palmeiras, farejador } from "../assets";
 
 export const BREAKPOINTS = {
   PHONE_SMALL: 350,
@@ -25,26 +9,55 @@ export const BREAKPOINTS = {
   DESKTOP: 1800,
 };
 
+export const profile = {
+  name: "Walafi Ferreira",
+  role: "Senior Full-Stack Engineer & Tech Lead",
+  headline: "I build and lead fast, reliable mobile and web products.",
+  summary:
+    "Senior full-stack engineer and tech lead specialized in React Native, Expo, Next.js, Node.js and TypeScript. I've built apps for Flamengo, Grêmio, Cruzeiro, Chicago Fire and Orlando City.",
+  stack: ["React Native", "Expo", "Next.js", "Node.js", "TypeScript"],
+  location: "Remote · UTC-3",
+  clients: ["Flamengo", "Grêmio", "Cruzeiro", "Chicago Fire", "Orlando City"],
+  email: "walafif81@gmail.com",
+  linkedin: "https://linkedin.com/in/walafi-ferreira",
+  github: "https://github.com/Walafi02",
+};
+
+export const navLinks = [
+  { label: "Expertise", href: "#expertise" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
+
 export const skills = [
   {
     title: "React Native",
-    backgroundColor: "rgb(1, 104, 151)",
+    description: "Cross-platform iOS & Android apps for millions of fans.",
     image: react,
   },
   {
-    title: "React",
-    backgroundColor: "rgb(113, 174, 214)",
-    image: react,
+    title: "Expo",
+    description: "Fast iteration, OTA updates and streamlined app releases.",
+    monogram: "EX",
   },
   {
-    title: "Node JS",
-    backgroundColor: "#65BABD",
+    title: "Next.js",
+    description: "Performant, SEO-friendly web apps with React.",
+    monogram: "N",
+  },
+  {
+    title: "TypeScript",
+    description: "Type-safe, maintainable code across the whole stack.",
+    monogram: "TS",
+  },
+  {
+    title: "Node.js",
+    description: "Scalable REST APIs, integrations and backend services.",
     image: node,
   },
   {
-    title:
-      "<span style='color: rgba(0, 0, 0, 1);'>Postgre<span style='color: rgb(58, 108, 148);'>SQL</span></span>",
-    backgroundColor: "rgb(255, 255, 255)",
+    title: "PostgreSQL",
+    description: "Relational data modeling, queries and performance tuning.",
     image: postgreSQL,
   },
 ];
@@ -52,54 +65,42 @@ export const skills = [
 export const projects = [
   {
     image: cruzeiro,
-    projectName: "App/Site Cruzeiro",
-    projectDescription: "App designed to boost fan membership engagement with the team.",
-    onClick: () => window.open(`https://www.cruzeiro.com.br`),
-    buttomLabel: "Open Site",
-  },
-  {
-    image: palmeiras,
-    projectName: "App Palmeiras",
+    category: "Mobile & Web",
+    projectName: "Cruzeiro — App & Website",
     projectDescription:
-      "App responsible for engaging club members with the team.",
-    onClick: () =>
-      window.open(
-        "https://play.google.com/store/apps/details?id=com.cognyhub.palmeiras&pcampaignid=web_share"
-      ),
-    buttomLabel: "Open Play Story",
+      "Official app and website designed to boost fan membership engagement with the club.",
+    stack: ["React Native", "React", "Node.js"],
+    link: "https://www.cruzeiro.com.br",
+    linkLabel: "Visit website",
   },
   {
     image: palmeiras,
+    category: "Mobile",
+    projectName: "Palmeiras App",
+    projectDescription:
+      "Mobile app responsible for engaging club members with the team and its content.",
+    stack: ["React Native", "Node.js"],
+    link: "https://play.google.com/store/apps/details?id=com.cognyhub.palmeiras&pcampaignid=web_share",
+    linkLabel: "View on Google Play",
+  },
+  {
+    image: palmeiras,
+    category: "Web",
     projectName: "Avante Premiado",
     projectDescription:
-      "Website focused on tracking raffles, winners, and lucky numbers.",
-    onClick: () => window.open(`https://www.avantipremiado.com.br`),
-    buttomLabel: "Open Site",
+      "Website focused on tracking raffles, winners and lucky numbers in real time.",
+    stack: ["React", "Node.js", "PostgreSQL"],
+    link: "https://www.avantipremiado.com.br",
+    linkLabel: "Visit website",
   },
   {
     image: farejador,
+    category: "SaaS",
     projectName: "Farejador de Produtos",
-    projectDescription: "Platform that makes finding top resale products faster and easier.",
-    buttomLabel: "Show video",
-    onClick: () =>
-      window.open("https://youtu.be/4pqRuFj_KHg?si=dohOwfL9MoYL5rnv"),
-  },
-];
-
-export const contacts = [
-  {
-    image: linkedin,
-    link: `http://linkedin.com/in/walafi-ferreira`,
-    title: "Linkedin",
-  },
-  {
-    image: github,
-    link: `https://github.com/Walafi02`,
-    title: "Github",
-  },
-  {
-    image: gmail,
-    link: `mailto:walafif81@gmail.com`,
-    title: "E-Mail",
+    projectDescription:
+      "Platform that makes finding top-selling resale products faster and easier.",
+    stack: ["React", "Node.js"],
+    link: "https://youtu.be/4pqRuFj_KHg?si=dohOwfL9MoYL5rnv",
+    linkLabel: "Watch demo",
   },
 ];

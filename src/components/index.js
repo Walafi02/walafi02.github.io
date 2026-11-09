@@ -1,5 +1,8 @@
+import Navbar from "./Navbar";
 import Header from "./Header";
-import Card from "./Card";
+import Expertise from "./Expertise";
+import Projects from "./Projects";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
-export { Header, Card, Contact };
+export { Navbar, Header, Expertise, Projects, Contact, Footer };

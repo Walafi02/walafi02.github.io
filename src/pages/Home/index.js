@@ -1,19 +1,25 @@
-import React, { useRef } from "react";
+import React from "react";
 
-import { Card, Contact, Header } from "../../components";
-import { projects, skills } from "../../utils/consts";
+import {
+  Contact,
+  Expertise,
+  Footer,
+  Header,
+  Navbar,
+  Projects,
+} from "../../components";
 
-const Home = () => {
-  const projectsRef = useRef(null)
-
-  return (
-    <div>
-      <Header projectsRef={projectsRef} />
-      <Card title='Skills' data={skills} />
-      <Card parentRef={projectsRef} title='Projects' data={projects} />
+const Home = () => (
+  <>
+    <Navbar />
+    <main>
+      <Header />
+      <Expertise />
+      <Projects />
       <Contact />
-    </div>
-  );
-};
+    </main>
+    <Footer />
+  </>
+);
 
 export default Home;

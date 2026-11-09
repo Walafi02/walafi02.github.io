@@ -1,21 +1,22 @@
 import React from "react";
 import { Global } from "@emotion/react";
+import AOS from "aos";
 
 import { GlobalStyles } from "./utils/layouts";
 import { Home } from "./pages";
 
-import AOS from "aos";
 AOS.init({
-  duration: 500,
+  duration: 600,
+  easing: "ease-out-cubic",
+  once: true,
+  offset: 40,
 });
 
-const App = () => {
-  return (
-    <div className="content">
-      <Global styles={GlobalStyles} />
-      <Home />
-    </div>
-  );
-};
+const App = () => (
+  <>
+    <Global styles={GlobalStyles} />
+    <Home />
+  </>
+);
 
 export default App;
