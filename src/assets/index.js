@@ -9,6 +9,7 @@ import farejador from "./farejador.png";
 import linkedin from "./linkedin.png";
 import github from "./github.png";
 import gmail from "./gmail.jpg";
+import orlando from "./orlando.png";
 
 export {
   react,
@@ -21,4 +22,5 @@ export {
   github,
   gmail,
   gremio,
+  orlando,
 };

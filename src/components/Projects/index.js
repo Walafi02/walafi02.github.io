@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 import Section from "../Section";
-import { ArrowUpRight } from "../Icons";
+import { ArrowUpRight, PlayTriangle, Smartphone } from "../Icons";
 import { projects, BREAKPOINTS } from "../../utils/consts";
 
 const Grid = styled.div`
@@ -15,7 +15,8 @@ const Grid = styled.div`
   }
 `;
 
-const Card = styled.a`
+const Card = styled.article`
+  position: relative;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--line);
@@ -41,6 +42,19 @@ const Card = styled.a`
       object-fit: contain;
       filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12));
       transition: transform 0.3s ease;
+    }
+
+    /* Landscape logos (e.g. two crests side by side) need more width. */
+    /* Logos with a lot of empty space around them. */
+    img.large {
+      width: 38%;
+      max-width: 175px;
+    }
+
+    img.wide {
+      width: 75%;
+      max-width: 400px;
+      aspect-ratio: auto;
     }
 
     .monogram {
@@ -139,6 +153,50 @@ const Card = styled.a`
     color: var(--accent);
   }
 
+  /* Makes the whole card clickable; store links sit above this layer. */
+  .cover {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+  }
+
+  .stores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+
+    a {
+      position: relative;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      transition: border-color 0.15s ease, background 0.15s ease;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        color: var(--ink-soft);
+      }
+
+      &:hover {
+        border-color: var(--accent);
+        background: var(--accent-soft);
+      }
+    }
+  }
+
   &:hover {
     border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
     box-shadow: var(--shadow);
@@ -166,16 +224,30 @@ const Projects = () => (
       {projects.map((project, i) => (
         <Card
           key={project.projectName}
-          href={project.link}
-          target="_blank"
-          rel="noreferrer"
           data-aos="fade-up"
           data-aos-delay={(i % 2) * 80}
         >
+          <a
+            className="cover"
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${project.projectName} — ${project.linkLabel}`}
+          />
           <div className="media">
             <span className="category">{project.category}</span>
             {project.image ? (
-              <img src={project.image} alt="" />
+              <img
+                src={project.image}
+                alt=""
+                className={
+                  project.wideImage
+                    ? "wide"
+                    : project.largeImage
+                    ? "large"
+                    : undefined
+                }
+              />
             ) : (
               <span className="monogram" aria-hidden="true">
                 {project.monogram}
@@ -194,8 +266,34 @@ const Projects = () => (
                   <li key={tech}>{tech}</li>
                 ))}
               </ul>
-              <span className="link">{project.linkLabel}</span>
+              <span className="link" aria-hidden="true">
+                {project.linkLabel}
+              </span>
             </div>
+            {project.stores && (
+              <div className="stores">
+                {project.stores.appStore && (
+                  <a
+                    href={project.stores.appStore}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.projectName} on the App Store`}
+                  >
+                    <Smartphone /> App Store
+                  </a>
+                )}
+                {project.stores.googlePlay && (
+                  <a
+                    href={project.stores.googlePlay}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.projectName} on Google Play`}
+                  >
+                    <PlayTriangle /> Google Play
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         </Card>
       ))}

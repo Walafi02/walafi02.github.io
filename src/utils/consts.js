@@ -1,4 +1,4 @@
-import { react, node, cruzeiro, gremio, postgreSQL, palmeiras, farejador } from "../assets";
+import { react, node, cruzeiro, gremio, postgreSQL, palmeiras, farejador, orlando } from "../assets";
 
 export const BREAKPOINTS = {
   PHONE_SMALL: 350,
@@ -72,9 +72,14 @@ export const projects = [
     stack: ["React Native", "React", "Node.js"],
     link: "https://www.cruzeiro.com.br",
     linkLabel: "Visit website",
+    stores: {
+      appStore: "https://apps.apple.com/app/id1632719034",
+      googlePlay: "https://play.google.com/store/apps/details?id=br.com.cruzeiro.nacaoazul",
+    },
   },
   {
     image: gremio,
+    largeImage: true,
     category: "Mobile & Web",
     projectName: "Grêmio — App & Website",
     projectDescription:
@@ -82,9 +87,14 @@ export const projects = [
     stack: ["React Native", "Next.js", "Node.js"],
     link: "https://portal.gremio.net/",
     linkLabel: "Visit website",
+    stores: {
+      appStore: "https://apps.apple.com/app/id1618055110",
+      googlePlay: "https://play.google.com/store/apps/details?id=io.gremio.app",
+    },
   },
   {
-    monogram: "OC",
+    image: orlando,
+    wideImage: true,
     category: "Mobile",
     projectName: "Orlando City SC — LionNation App",
     projectDescription:
@@ -92,6 +102,10 @@ export const projects = [
     stack: ["React Native", "Expo", "Node.js"],
     link: "https://play.google.com/store/apps/details?id=com.ocsc.lionnation",
     linkLabel: "View on Google Play",
+    stores: {
+      appStore: "https://apps.apple.com/app/id1454834946",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.ocsc.lionnation",
+    },
   },
   {
     image: palmeiras,
@@ -102,6 +116,10 @@ export const projects = [
     stack: ["React Native", "Node.js"],
     link: "https://play.google.com/store/apps/details?id=com.cognyhub.palmeiras&pcampaignid=web_share",
     linkLabel: "View on Google Play",
+    stores: {
+      appStore: "https://apps.apple.com/app/id1577292124",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.cognyhub.palmeiras&pcampaignid=web_share",
+    },
   },
   {
     image: palmeiras,
