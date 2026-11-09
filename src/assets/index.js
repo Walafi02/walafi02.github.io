@@ -1,6 +1,7 @@
 import react from "./react.png";
 import node from "./node.svg";
 import cruzeiro from "./cruzeiro.png";
+import gremio from "./gremio.png"
 import postgreSQL from "./postgreSQL.png";
 import palmeiras from "./palmeiras.png";
 import farejador from "./farejador.png";
@@ -19,4 +20,5 @@ export {
   linkedin,
   github,
   gmail,
+  gremio,
 };

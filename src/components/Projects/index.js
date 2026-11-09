@@ -43,6 +43,22 @@ const Card = styled.a`
       transition: transform 0.3s ease;
     }
 
+    .monogram {
+      display: grid;
+      place-items: center;
+      width: 30%;
+      max-width: 140px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 700;
+      color: var(--ink-soft);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+      transition: transform 0.3s ease;
+    }
+
     .category {
       position: absolute;
       top: 16px;
@@ -128,7 +144,8 @@ const Card = styled.a`
     box-shadow: var(--shadow);
     transform: translateY(-3px);
 
-    .media img {
+    .media img,
+    .media .monogram {
       transform: scale(1.06);
     }
     .title svg {
@@ -157,7 +174,13 @@ const Projects = () => (
         >
           <div className="media">
             <span className="category">{project.category}</span>
-            <img src={project.image} alt="" />
+            {project.image ? (
+              <img src={project.image} alt="" />
+            ) : (
+              <span className="monogram" aria-hidden="true">
+                {project.monogram}
+              </span>
+            )}
           </div>
           <div className="body">
             <div className="title">

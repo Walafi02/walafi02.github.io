@@ -1,4 +1,4 @@
-import { react, node, cruzeiro, postgreSQL, palmeiras, farejador } from "../assets";
+import { react, node, cruzeiro, gremio, postgreSQL, palmeiras, farejador } from "../assets";
 
 export const BREAKPOINTS = {
   PHONE_SMALL: 350,
@@ -72,6 +72,26 @@ export const projects = [
     stack: ["React Native", "React", "Node.js"],
     link: "https://www.cruzeiro.com.br",
     linkLabel: "Visit website",
+  },
+  {
+    image: gremio,
+    category: "Mobile & Web",
+    projectName: "Grêmio — App & Website",
+    projectDescription:
+      "Official app and website for Grêmio fans and members, built on Cogny's white-label fan engagement platform.",
+    stack: ["React Native", "Next.js", "Node.js"],
+    link: "https://portal.gremio.net/",
+    linkLabel: "Visit website",
+  },
+  {
+    monogram: "OC",
+    category: "Mobile",
+    projectName: "Orlando City SC — LionNation App",
+    projectDescription:
+      "Official fan engagement app for Orlando City SC and Orlando Pride, with a custom white-label layout built on Cogny's platform.",
+    stack: ["React Native", "Expo", "Node.js"],
+    link: "https://play.google.com/store/apps/details?id=com.ocsc.lionnation",
+    linkLabel: "View on Google Play",
   },
   {
     image: palmeiras,
