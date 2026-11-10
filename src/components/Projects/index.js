@@ -153,6 +153,24 @@ const Card = styled.article`
     color: var(--accent);
   }
 
+  .note {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* Past projects with no public link: no hover lift. */
+  &.static:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--line);
+
+    .media img,
+    .media .monogram {
+      transform: none;
+    }
+  }
+
   /* Makes the whole card clickable; store links sit above this layer. */
   .cover {
     position: absolute;
@@ -226,14 +244,17 @@ const Projects = () => (
           key={project.projectName}
           data-aos="fade-up"
           data-aos-delay={(i % 2) * 80}
+          className={project.link ? undefined : "static"}
         >
-          <a
-            className="cover"
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`${project.projectName} — ${project.linkLabel}`}
-          />
+          {project.link && (
+            <a
+              className="cover"
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${project.projectName} — ${project.linkLabel}`}
+            />
+          )}
           <div className="media">
             <span className="category">{project.category}</span>
             {project.image ? (
@@ -257,7 +278,7 @@ const Projects = () => (
           <div className="body">
             <div className="title">
               <h3>{project.projectName}</h3>
-              <ArrowUpRight />
+              {project.link && <ArrowUpRight />}
             </div>
             <p>{project.projectDescription}</p>
             <div className="footer">
@@ -266,9 +287,13 @@ const Projects = () => (
                   <li key={tech}>{tech}</li>
                 ))}
               </ul>
-              <span className="link" aria-hidden="true">
-                {project.linkLabel}
-              </span>
+              {project.link ? (
+                <span className="link" aria-hidden="true">
+                  {project.linkLabel}
+                </span>
+              ) : (
+                project.note && <span className="note">{project.note}</span>
+              )}
             </div>
             {project.stores && (
               <div className="stores">

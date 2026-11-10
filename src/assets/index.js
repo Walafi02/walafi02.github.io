@@ -10,6 +10,8 @@ import linkedin from "./linkedin.png";
 import github from "./github.png";
 import gmail from "./gmail.jpg";
 import orlando from "./orlando.png";
+import flamengo from "./flamengo.png";
+import chicagoFire from "./chicago-fire.png";
 
 export {
   react,
@@ -23,4 +25,6 @@ export {
   gmail,
   gremio,
   orlando,
+  flamengo,
+  chicagoFire,
 };

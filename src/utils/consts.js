@@ -1,4 +1,4 @@
-import { react, node, cruzeiro, gremio, postgreSQL, palmeiras, farejador, orlando } from "../assets";
+import { react, node, cruzeiro, gremio, postgreSQL, palmeiras, farejador, orlando, chicagoFire, flamengo } from "../assets";
 
 export const BREAKPOINTS = {
   PHONE_SMALL: 350,
@@ -60,6 +60,11 @@ export const skills = [
     description: "Relational data modeling, queries and performance tuning.",
     image: postgreSQL,
   },
+  {
+    title: "Redis",
+    description: "Caching, queues and background jobs for fast, scalable backends.",
+    monogram: "RD",
+  },
 ];
 
 export const projects = [
@@ -84,7 +89,7 @@ export const projects = [
     projectName: "Grêmio — App & Website",
     projectDescription:
       "Official app and website for Grêmio fans and members, built on Cogny's white-label fan engagement platform.",
-    stack: ["React Native", "Next.js", "Node.js"],
+    stack: ["React Native", "Expo", "Next.js", "Node.js"],
     link: "https://portal.gremio.net/",
     linkLabel: "Visit website",
     stores: {
@@ -99,13 +104,31 @@ export const projects = [
     projectName: "Orlando City SC — LionNation App",
     projectDescription:
       "Official fan engagement app for Orlando City SC and Orlando Pride, with a custom white-label layout built on Cogny's platform.",
-    stack: ["React Native", "Expo", "Node.js"],
+    stack: ["React Native", "Node.js"],
     link: "https://play.google.com/store/apps/details?id=com.ocsc.lionnation",
     linkLabel: "View on Google Play",
     stores: {
       appStore: "https://apps.apple.com/app/id1454834946",
       googlePlay: "https://play.google.com/store/apps/details?id=com.ocsc.lionnation",
     },
+  },
+  {
+    image: flamengo,
+    category: "Mobile",
+    projectName: "Flamengo App",
+    projectDescription:
+      "Fan engagement app for Clube de Regatas do Flamengo, one of the biggest football clubs in the world, built on Cogny's white-label platform.",
+    stack: ["React Native", "Node.js"],
+    note: "Past project",
+  },
+  {
+    image: chicagoFire,
+    category: "Mobile",
+    projectName: "Chicago Fire FC App",
+    projectDescription:
+      "Official fan engagement app for Chicago Fire FC, the MLS club, built on Cogny's white-label platform.",
+    stack: ["React Native", "Node.js"],
+    note: "Past project",
   },
   {
     image: palmeiras,
@@ -137,7 +160,7 @@ export const projects = [
     projectName: "Farejador de Produtos",
     projectDescription:
       "Platform that makes finding top-selling resale products faster and easier.",
-    stack: ["React", "Node.js"],
+    stack: ["React", "Node.js", "PostgreSQL", "Redis"],
     link: "https://youtu.be/4pqRuFj_KHg?si=dohOwfL9MoYL5rnv",
     linkLabel: "Watch demo",
   },
