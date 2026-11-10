@@ -1,19 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.8f9cbf07.css",
-    "main.js": "/static/js/main.9748b499.js",
+    "main.js": "/static/js/main.f5206d6a.js",
     "static/media/perfil.png": "/static/media/perfil.3e140d3b2d4cdf2b9c1f.png",
+    "static/media/orlando.png": "/static/media/orlando.c75c22787dca7ac46ccc.png",
     "static/media/postgreSQL.png": "/static/media/postgreSQL.519a271ad6537a824c0c.png",
+    "static/media/chicago-fire.png": "/static/media/chicago-fire.aac9250899570cb14fef.png",
     "static/media/cruzeiro.png": "/static/media/cruzeiro.1cda021ea84d3a8c8c9a.png",
     "static/media/react.png": "/static/media/react.8f2718000b19b939f8fb.png",
     "static/media/palmeiras.png": "/static/media/palmeiras.49e3da5b4171e1f5ed5b.png",
+    "static/media/flamengo.png": "/static/media/flamengo.5ea8e5f1321c1bacf974.png",
+    "static/media/gremio.png": "/static/media/gremio.0cef7f8b57e725156eef.png",
     "static/media/node.svg": "/static/media/node.dd47e26ed1d7dddf018e5cbffc40f76d.svg",
     "index.html": "/index.html",
     "main.8f9cbf07.css.map": "/static/css/main.8f9cbf07.css.map",
-    "main.9748b499.js.map": "/static/js/main.9748b499.js.map"
+    "main.f5206d6a.js.map": "/static/js/main.f5206d6a.js.map"
   },
   "entrypoints": [
     "static/css/main.8f9cbf07.css",
-    "static/js/main.9748b499.js"
+    "static/js/main.f5206d6a.js"
   ]
 }
