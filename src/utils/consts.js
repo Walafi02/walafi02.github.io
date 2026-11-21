@@ -1,4 +1,4 @@
-import { react, node, cruzeiro, gremio, postgreSQL, palmeiras, farejador, orlando, chicagoFire, flamengo } from "../assets";
+import { react, node, cruzeiro, gremio, postgreSQL, palmeiras, farejador, orlando, chicagoFire, flamengo, uol } from "../assets";
 
 export const BREAKPOINTS = {
   PHONE_SMALL: 350,
@@ -111,6 +111,27 @@ export const projects = [
       appStore: "https://apps.apple.com/app/id1454834946",
       googlePlay: "https://play.google.com/store/apps/details?id=com.ocsc.lionnation",
     },
+  },
+  {
+    image: uol,
+    wideImage: true,
+    category: "Web",
+    projectName: "UOL: Live Tennis Widgets",
+    projectDescription:
+      "Built in React two embeddable tennis widgets for UOL, one of Brazil's largest web portals. The tournament widget follows events such as Wimbledon, with upcoming matches, past results and full brackets; a second one tracks a single match live, with commentary, stats and point-by-point. Shipped as JavaScript bundles that UOL loads into its own pages.",
+    stack: ["React", "JavaScript"],
+    link: "https://www.uol.com.br/esporte/ultimas-noticias/2026/06/29/sinner-sangue-tenis-estreia-em-wimbledon.ghtm#widget-container",
+    linkLabel: "See it live",
+    demos: [
+      {
+        label: "Live tournament",
+        href: "https://www.uol.com.br/esporte/ultimas-noticias/2026/06/29/sinner-sangue-tenis-estreia-em-wimbledon.ghtm#widget-container",
+      },
+      {
+        label: "Live match",
+        href: "https://www.uol.com.br/esporte/ao-vivo/2025/05/27/joao-fonseca-x-hubert-hurkacz---1-rodada-de-roland-garros.htm#widget-container",
+      },
+    ],
   },
   {
     image: flamengo,

@@ -295,6 +295,21 @@ const Projects = () => (
                 project.note && <span className="note">{project.note}</span>
               )}
             </div>
+            {project.demos && (
+              <div className="stores">
+                {project.demos.map((demo) => (
+                  <a
+                    key={demo.href}
+                    href={demo.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.projectName}: ${demo.label}`}
+                  >
+                    <ArrowUpRight /> {demo.label}
+                  </a>
+                ))}
+              </div>
+            )}
             {project.stores && (
               <div className="stores">
                 {project.stores.appStore && (

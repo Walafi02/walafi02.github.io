@@ -12,6 +12,7 @@ import gmail from "./gmail.jpg";
 import orlando from "./orlando.png";
 import flamengo from "./flamengo.png";
 import chicagoFire from "./chicago-fire.png";
+import uol from "./uol.svg";
 
 export {
   react,
@@ -27,4 +28,5 @@ export {
   orlando,
   flamengo,
   chicagoFire,
+  uol,
 };
